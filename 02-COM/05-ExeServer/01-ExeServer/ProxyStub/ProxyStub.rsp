@@ -1,0 +1,6 @@
+/h ProxyStubHeader.h
+/iid ProxyStubGuids.c
+/dlldata ProxyStubDlldata.c
+/proxy ProxyStub.c
+.\ProxyStub.idl
+

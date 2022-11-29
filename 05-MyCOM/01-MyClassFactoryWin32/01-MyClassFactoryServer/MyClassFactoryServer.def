@@ -1,0 +1,5 @@
+LIBRARY MyClassFactoryServer.dll
+EXPORTS
+      MyDllGetClassObject   PRIVATE
+      DllCanUnloadNow       PRIVATE
+

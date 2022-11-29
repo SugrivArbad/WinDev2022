@@ -1,0 +1,3 @@
+#include "window_sug.h"
+
+SUG_ICON ICON MyIcon.ico

@@ -1,0 +1,5 @@
+LIBRARY InnerDllServer.dll
+EXPORTS
+	  DllGetClassObject	PRIVATE
+	  DllCanUnloadNow	PRIVATE
+

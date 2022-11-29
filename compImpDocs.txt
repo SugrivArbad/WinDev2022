@@ -1,0 +1,124 @@
+  /* Important commands and shortcuts and tips */
+
+1] Run Commands (Win + R):
+	1) cmd
+	   // command prompt
+	2) systeminfo
+	   // Information about your system (PC and OS:w
+	3) appwiz.cpl
+	   // List intsalled apps
+	4) msconfig
+	   // system configuration
+	5) regedit
+	   // registry editor
+	6) services.msc
+	   // all running services
+
+
+
+
+2] Visual studio shortcuts:
+	1) comment/uncomment
+		Ctrl+K, Ctrl+C
+		Ctrl+K, Ctrl+U
+	2) traverse between files
+		Ctrl+Tab
+	3) close file
+		Ctrl+F4
+	4) plugin for vim editor
+		VsVm
+
+
+
+3] vim shortcuts:
+	1) Convert all buffers in tab balls
+		:tab ba[ll]
+		<Ctrl> + <Shift> + <Up Arrow>/<Down Arrow>		// for switching in tab balls
+
+	2) Convert all buffers into vertical balls
+		:vert[ical] ba[ll]
+		<Ctrl> + W + W						// to switch in between vertical balls	
+	
+	3) Copy to clipboard of system
+		"*y    or    "+y
+
+	3) paste from clipboard of system
+		"*p    or    "+p
+
+	4) Match parentheses
+		:DoMatchParen
+
+	5) Create new n lines
+		23 + o + Esc
+
+	6) Previous and Next page in Normal mode
+        Ctrl + Shift + N
+		Ctrl + Shift + P
+
+	7) append next line to current line separating with <space>
+		Shift + J
+
+	8) Escape option
+		Ctrl + [
+
+    9) Next and previous line(without moving cursor) in Normal mode
+        Ctrl + E (nExt)
+        Ctrl + Y (prevYous)
+
+    10) Show all words from start of source code
+        Ctrl + Shift + P
+        
+	
+
+3] Shortcut to create new text file
+	Alt+H, W, UpDown_Arrow_Keys
+
+4] Qt offline installation:
+	https://www.qt.io/offline-installers
+
+5] Create GUID
+	C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\Tools
+	=> guidgen.exe
+
+6] create empty file -> cmd
+	type nul > filename
+
+7] copy multiple files -> cmd
+	for %I in (<file1> <file2> ... <filen>) do copy %I <folderPath>
+
+8] delete registry entry -> cmd
+	reg delete "HKEY_CLASSES_ROOT\CLSID\{BBB02707-82BA-4ADD-84F7-BE9FBF855EB4}"
+
+9] comment in batch file
+    1) Multiline comment
+	GOTO comment
+	...skip this...
+	:comment
+
+    2) single line comment
+	ECHO "Hello" & :: This command prints 'Hello'
+
+    3) single line comment
+	:: This is a comment that won't be printed
+	REM This is a comment that will be printed
+
+10] copy current directory path to clipboad
+	cd | clip
+
+11] increase laptop speed -> disabling and stopping "SysMain" service
+	sc stop "SysMain" & sc config "SysMain" start=disabled
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

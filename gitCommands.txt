@@ -1,0 +1,278 @@
+
+0] to copy-paste in GitBash
+
+	Ctrl + Insert			// to copy
+
+	Shift + Insert			// to paste
+
+1] register your unique identity globally
+
+	git config --global user.name "Sugriv Arbad"
+	git config --global useremail "arbadsugriv@gmail.com"
+
+
+2] change default editor
+	
+	git config --global core.editor="nano"
+
+   find your git configuration file
+
+	C:\Users\sugriv\.gitconfig
+
+
+3] create new project and initialize git for that project
+	
+	mkdir mynewproject
+
+	cd mynewproject			// working directory
+
+	git init			// repository creation of git
+
+4] create new file and check git status
+	
+	touch README.md
+
+	touch testfile1.txt
+
+	git status
+
+    git status -uall        // for all files including subdirectories
+
+
+5] staging files (preparing particular files to take snapshot)
+   note: you can multiple files, for example here we added README.md and testfile1.txt
+
+	git add README.md testfile1.txt		// staging files
+
+	git status
+
+
+6] Unstaging files (removing those from preparing state for snapshot)
+   note: this doesn't remove files from your working directory
+
+	git rm --cached README.md testfile1.txt		// unstaging files
+
+	git status
+
+7] commits (taking snapshot of project - commiter, author)
+
+	git commit	// after hitting it opens editor, then enter message of your choice. save and close the editor
+
+	git status
+
+
+8] restoring data of file when modifiled file is staged
+
+	vim README.md		// modify file
+
+	git add README.md
+
+	git restore README.md	// it removes modifications in file i.e. discard changes in working directory
+
+
+9] to get ignored particular files by git
+
+	touch private1.txt
+
+	touch private2.txt
+
+	git status
+
+	vim .gitignore
+		private1.txt
+		private2.txt
+
+	git status
+
+	git add .gitignore
+
+	git commit		// added .gitignore file
+
+	git status
+
+
+10] patterns for .gitignore file
+
+	config.txt		// in all directories and also subdirectories
+	
+	build/			// any directory
+
+	build			// any file and any directory
+
+	*.exe			// any file with .exe extension
+
+	bin/*.exe		// inside bin directory all files with .exe
+	
+	temp*			// any file or directory starting with temp
+
+	**/config
+
+	**/config/local.py
+
+	output/**/result.exe
+
+
+11] exception for .gitignore
+
+	*.exe
+	!output.exe		// exception
+
+
+12] check logs or history
+
+	git log
+
+	git log -n 10
+
+	git log --stat
+
+	git log --graph
+
+	git log --author=Sugriv
+
+	git log --after=2022/11/15
+
+	git log --oneline		// show commit histroy in one line
+
+
+13] viewing previous versions
+
+	git show ddb7b4e	// generally first 7 digits of any commit id
+
+
+
+14] checking out previous commits (visiting older chenges)
+
+	git checkout 3cd6e42	// first 7 digits of commit id
+
+
+15] reverting commit 
+
+	git revert 4a81560
+
+	git log --oneline
+
+	git status
+
+
+16] list files at staged area
+
+	git diff --staged
+
+
+17] modify or ammend commit
+    note : use "git status" and "git log --oneline" for better experience
+
+	git commit -m "commit which I want to modify or ammend"
+
+	git reset --soft HEAD~1
+
+	get reset HEAD newfile1.pp newfile2.pp
+        
+
+
+18] Manual page of command
+	
+	git help <command>		// sytax
+
+	git help cvs-migration		// example
+
+	git help commit			// example
+
+
+19] to add remote repository
+
+	git remote add <name> <link>								// syntax
+	
+	git remote add origin git@github.com:SugrivArbad/gitlearning-demo.git
+            // example - here name can even of your choice - example: myrepository
+
+    git remote -v
+
+
+20] remote repository operation (list, remove):
+	
+	git remote			// check remote repository
+
+    git remote -v       // check remote repository with more details (verbosely)
+
+	git remote rm <remote_name>	// syntax: remove remote repository
+
+    git remote rm origin        // example: remove origin repository
+
+
+21] staging files (locally)
+
+    git add README.md gitCommands.txt Beginning_Git_and_GitHub_by_Mariot_Tsitoria.pdf
+
+
+22] commit changes (project i.e. taking snapshot)
+
+    git commit
+
+
+23] push commit to remote repository  --> producing errors while https
+
+    git push origin master
+        // got error
+		The authenticity of host 'github.com (20.207.73.82)' can't be established.
+		ED25519 key fingerprint is SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU.
+		This key is not known by any other names
+		Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+		Warning: Permanently added 'github.com' (ED25519) to the list of known hosts.
+		git@github.com: Permission denied (publickey).
+		fatal: Could not read from remote repository.
+
+
+24] Just to think on Authentication
+
+    C:/Program Files/Git/mingw64/bin/git-askpass.exe
+
+    // may be useful for HTTPS but not for SSH
+    git config --global user.name "Sugriv Arbad"
+    git config --global user.email "arbadsugriv@gmail.com"
+    git config --local credential.helper ""
+
+
+25] Errors for git push
+        --> Solution : Generate SSH key add it to ssh-agent and to Your GitHub account
+
+    git push origin master
+        // got errors
+        git@github.com: Permission denied (publickey).
+        fatal: Could not read from remote repository.
+
+        Please make sure you have the correct access rights
+        and the repository exists.
+
+
+26] Generate SSH key add it to ssh-agent and to Your GitHub account
+
+    ssh-keygen.exe -t ed25519 -C "arbadsugriv@gmail.com"
+        // generate ssh key
+        // custom path : create directory .ssh in your custom path 
+            (no need to create any file inside it)
+        // when you run above command it asks for path then below type path
+        // example --> 
+            1] D:\Coding\GitLearning\.ssh\id_25519
+            2] go to parent directory of .ssh and run above ssh-keygen command
+                and type path
+                ./.ssh/id_25519
+
+    On Github account -> settings -> SSH and GPG keys -> New key
+        //copy public key to GitHub account
+
+    eval "$(ssh-agent -s)"          OR      ssh-agent -s
+        // start ssh agent to add your private key
+
+    ssh-add /d/Coding/GitLearning/.ssh/id_25519
+        // add identity to private file
+
+
+27] Now push your code to remote repository
+
+    git push origin master          // works!
+
+
+28] 
+

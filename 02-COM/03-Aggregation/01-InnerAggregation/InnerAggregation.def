@@ -1,0 +1,5 @@
+LIBRARY InnerAggregation.dll
+EXPORTS
+	  DllGetClassObject	PRIVATE
+	  DllCanUnloadNow	PRIVATE
+

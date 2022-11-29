@@ -1,0 +1,7 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\CLSID\{E7A2EC19-796A-4427-829B-521987413843}]
+@="SVA: My ClassFactory DLL Server"
+[HKEY_CLASSES_ROOT\CLSID\{E7A2EC19-796A-4427-829B-521987413843}\InprocServer32]
+@="C:\\Windows\\System32\\ClassFactoryDllServerWithRegFile.dll"
+

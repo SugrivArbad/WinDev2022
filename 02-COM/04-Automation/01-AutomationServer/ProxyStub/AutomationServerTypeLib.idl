@@ -1,0 +1,40 @@
+import "unknwn.idl";
+
+// Interface definition block
+// IMyMath Interface
+[
+	object,
+	uuid(D14281F6-DD7C-4891-A4AE-7C5D94648E2B),
+	helpstring("SVA: IMyMath Interface declaration"),
+	pointer_default(unique), // unique ptr
+	dual, // both way access: 1] IDispatch 2] ClassFactory
+	oleautomation
+]
+
+interface IMyMath : IDispatch		// public mhanayachi garaj nahi
+{
+	import "oaidl.idl";	// ole automation idl
+	HRESULT SumOfTwoIntegers([in] int, [in] int, [out, retval] int*);
+	HRESULT SubtractionOfTwoIntegers([in] int, [in] int, [out, retval] int*);
+};
+
+// TypeLibrary definition block
+[
+	uuid(08D922D6-91D2-45D1-A0A1-197ABA6BCA5B), // LIBID of Type Library
+	version(1.0), // major version number.minor version number
+	helpstring("SVA: MyMath TypeLibrary")
+]
+library AutomationServerTypeLib
+{
+	importlib("stdole32.tlb");
+	// coclass definition block
+	[
+		uuid(C331AB68-B16E-4092-B6D7-54E1DD16E574),
+		helpstring("SVA: Automation Server coclass")
+	]
+	coclass CMyMath
+	{
+		[default] interface IMyMath;
+	};
+};
+

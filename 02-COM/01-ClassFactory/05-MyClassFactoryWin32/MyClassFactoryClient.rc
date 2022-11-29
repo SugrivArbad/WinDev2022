@@ -1,0 +1,4 @@
+#include "MyClassFactoryClient.h"
+
+MYICON ICON MyIcon.ico
+

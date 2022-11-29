@@ -1,0 +1,48 @@
+
+// tlbimp: create .dll from .tlb file
+
+C:\Sugriv\WinDev2022\02-COM\04-Automation\02-AutomationClients\03-DotNetClient\00-DotNetUnderstandableDLL>
+	tlbimp.exe C:\Windows\System32\AutomationServerTypeLib.tlb /out:.\AutomationServerTypeLibForDotNet.dll
+
+Microsoft (R) .NET Framework Type Library to Assembly Converter 4.8.3928.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+TlbImp : warning TI3002 : Importing a type library into a platform agnostic assembly.  This can cause errors if the type library is not truly platform agnostic.
+TlbImp : Type library imported to C:\Sugriv\WinDev2022\02-COM\04-Automation\02-AutomationClients\03-DotNetClient\00-DotNetUnderstandableDLL\AutomationServerTypeLibForDotNet.dll
+
+C:\Sugriv\WinDev2022\02-COM\04-Automation\02-AutomationClients\03-DotNetClient\00-DotNetUnderstandableDLL>dir
+ Volume in drive C has no label.
+ Volume Serial Number is AACA-5058
+
+ Directory of C:\Sugriv\WinDev2022\02-COM\04-Automation\02-AutomationClients\03-DotNetClient\00-DotNetUnderstandableDLL
+
+19-10-2022  22:49    <DIR>          .
+19-10-2022  22:49    <DIR>          ..
+19-10-2022  22:49             4,096 AutomationServerTypeLibForDotNet.dll
+               1 File(s)          4,096 bytes
+               2 Dir(s)  42,227,552,256 bytes free
+
+C:\Sugriv\WinDev2022\02-COM\04-Automation\02-AutomationClients\03-DotNetClient\00-DotNetUnderstandableDLL>copy AutomationServerTypeLibForDotNet.dll C:\Windows\System32
+Access is denied.
+        0 file(s) copied.
+
+C:\Sugriv\WinDev2022\02-COM\04-Automation\02-AutomationClients\03-DotNetClient\00-DotNetUnderstandableDLL>
+
+
+
+
+// tlbimp.exe file path
+
+C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.8 Tools
+
+
+// to see RCW - Runtime Callable Wrapper to see .Net converted class
+// also see MenuBar -> View -> MetaInfo -> Show!
+// /Adv - Advance
+// idlasm - idl cha assembler
+
+C:\Sugriv\WinDev2022\02-COM\04-Automation\02-AutomationClients\03-DotNetClient\00-DotNetUnderstandableDLL>
+
+	ildasm.exe /Adv AutomationServerTypeLibForDotNet.dll
+
+

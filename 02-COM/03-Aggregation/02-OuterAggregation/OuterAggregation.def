@@ -1,0 +1,5 @@
+LIBRARY OuterAggregation.dll
+EXPORTS
+	  DllGetClassObject	PRIVATE
+	  DllCanUnloadNow	PRIVATE
+

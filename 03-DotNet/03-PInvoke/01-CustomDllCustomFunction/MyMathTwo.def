@@ -1,0 +1,6 @@
+; this is module definition file
+LIBRARY MyMathTwo.dll
+; DESCRIPTION 'COPYRIGHT: SVA'
+EXPORTS
+	  MakeCube
+

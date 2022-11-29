@@ -1,0 +1,109 @@
+1] Window Application compilation:
+
+	cl.exe /c /EHsc Window.cpp
+
+	link.exe Window.obj user32.lib gdi32.lib /SUBSYSTEM:WINDOWS
+
+	Window.exe
+
+
+2] Icon Window Application compilation:
+
+	dir
+		=> MyIcon.ico, Window.cpp, Window.h, Window.rc
+
+	cl.exe /c /EHsc Window.cpp
+
+	rc.exe Window.rc
+
+	link.exe Window.obj Window.res user32.lib gdi32.lib /SUBSYSTEM:WINDOWS
+
+	Window.exe
+
+
+3] Multithreading compilation:
+
+	dir
+		=> MyIcon.ico, Window.cpp, Window.h, Window.rc
+
+	cl.exe /c /EHsc /D UNICODE Window.cpp
+
+	rc.exe Window.rc
+
+	link.exe Window.obj Window.res user32.lib gdi32.lib kernel32.lib /SUBSYSTEM:WINDOWS
+
+	Window.exe
+
+4] DLL compilation (implicit linking and explicit linking):
+	dir: C:\Sugriv\WinDev2022\01-SDK\03-DLL\02-Client\01-Implicit
+		=> Window.c/Window.cpp, MyIcon.ico, Window.h, Window.rc, MyMathOne.lib
+
+	if Window.cpp file -> use ' extern "C" '  in MaMathOne.h file for declaration
+
+	cl.exe /c /EHsc Window.c
+	or
+	cl.exe /c /EHsc Window.cpp
+
+	rc.exe Window.rc
+
+	link.exe Window.obj Window.res user32.lib gdi32.lib MyMathOne.lib /SUBSYSTEM:WINDOWS
+	or
+	link.exe Window.obj Window.res user32.lib gdi32.lib /SUBSYSTEM:WINDOWS
+ 		=> pragma comment(lib, "MyMathOne.lib") - add this line in Window.c
+
+
+5] Information about DLL:
+	dumpbin.exe /exports MyMathOne.dll
+	dumpbin.exe /all MyMathOne.dll
+
+
+6] Create DLL by __declspec(dllexport):
+	cl.exe /c /EHsc MyMathOne.c
+
+	link.exe MyMathOne.obj /DLL user32.lib /SUBSYSTEM:WINDOWS
+
+
+7] create DLL by .def file:
+	cd C:\Sugriv\WinDev2022\01-SDK\03-DLL\01-Server\02-Def>
+		dir केल्यानंतर तुम्हाला खालील files दिसतील.
+		=>MyMathTwo.c, MyMathTwo.def, MyMathTwo.h
+
+	cl.exe /c /EHsc MyMathTwo.c
+		=>MyMathTwo.c, MyMathTwo.def, MyMathTwo.h, MyMathTwo.obj
+
+	link.exe MyMathTwo.obj /DLL /DEF:MyMathTwo.def user32.lib /SUBSYSTEM:WINDOWS
+		=> 
+
+
+8]
+C:\Sugriv\WinDev2022\02-COM\01-ClassFactory\01-ClassFactoryDllServerWithRegFile>cl.exe /c /EHsc ClassFactoryDllServerWithRegFile.cpp
+C:\Sugriv\WinDev2022\02-COM\01-ClassFactory\01-ClassFactoryDllServerWithRegFile>link.exe ClassFactoryDllServerWithRegFile.obj /DLL /DEF:ClassFactoryDllServerWithRegFile.def user32.lib gdi32.lib kernel32.lib /SUBSYSTEM:WINDOWS
+Directory of C:\Sugriv\WinDev2022\02-COM\01-ClassFactory\01-ClassFactoryDllServerWithRegFile
+08/30/2022  11:28 PM             5,390 ClassFactoryDllServerWithRegFile.cpp
+08/30/2022  10:33 PM               115 ClassFactoryDllServerWithRegFile.def
+08/31/2022  01:30 AM           110,080 ClassFactoryDllServerWithRegFile.dll
+08/31/2022  01:30 AM             1,190 ClassFactoryDllServerWithRegFile.exp
+08/30/2022  11:29 PM             1,001 ClassFactoryDllServerWithRegFile.h
+08/30/2022  11:20 PM             1,910 ClassFactoryDllServerWithRegFile.lib
+08/31/2022  01:30 AM            19,071 ClassFactoryDllServerWithRegFile.obj
+08/30/2022  10:50 PM               291 ClassFactoryDllServerWithRegFile.reg
+
+
+9] 
+C:\Sugriv\WinDev2022\02-COM\01-ClassFactory\02-ClientOfClassFactoryDllServerWithRegFile>cl.exe /c /EHsc Window.cpp
+C:\Sugriv\WinDev2022\02-COM\01-ClassFactory\02-ClientOfClassFactoryDllServerWithRegFile>rc.exe Window.rc
+C:\Sugriv\WinDev2022\02-COM\01-ClassFactory\02-ClientOfClassFactoryDllServerWithRegFile>link.exe Window.obj user32.lib gdi32.lib ole32.lib oleaut32.lib /SUBSYSTEM:WINDOWS
+Put ClassFactoryDllServerWithRegFile.dll intside C:\Windows\System32
+double click on ClassFactoryDllServerWithRegFile.reg -> make entry in regedit(registry editor)
+08/30/2022  09:55 PM             1,001 ClassFactoryDllServerWithRegFile.h
+08/30/2022  10:50 PM               291 ClassFactoryDllServerWithRegFile.reg
+07/04/2022  10:25 PM             3,870 MyIcon.ico
+08/30/2022  11:59 PM             3,155 Window.cpp
+08/31/2022  12:00 AM            94,208 Window.exe
+07/11/2022  11:54 PM                22 Window.h
+08/30/2022  11:59 PM             4,443 Window.obj
+07/12/2022  11:17 PM                49 Window.rc
+08/31/2022  12:00 AM                58 Window.res
+
+
+

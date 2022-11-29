@@ -1,0 +1,4 @@
+#include "ClientOfContainment.h"
+
+MYICON ICON MyIcon.ico
+

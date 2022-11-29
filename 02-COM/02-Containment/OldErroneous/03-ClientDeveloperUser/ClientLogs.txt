@@ -1,0 +1,39 @@
+Client: Start WinMain()
+Clinet: after CoInitialize()
+Client: Start WndProc() hwnd: 000000000015078C, iMsg: 36, wParam: 0, lParam: 398623503504
+Client: Start WndProc() hwnd: 000000000015078C, iMsg: 129, wParam: 0, lParam: 398623503424
+Client: Start WndProc() hwnd: 000000000015078C, iMsg: 131, wParam: 0, lParam: 398623503536
+Client: Start WndProc() hwnd: 000000000015078C, iMsg: 1, wParam: 0, lParam: 398623503360
+Client: Before CoCreateInstance()
+Client: Start WndProc() hwnd: 000000000015078C, iMsg: 28, wParam: 1, lParam: 8088
+Client: Start WndProc() hwnd: 000000000015078C, iMsg: 799, wParam: 1, lParam: 0
+Client: Start WndProc() hwnd: 000000000015078C, iMsg: 28, wParam: 1, lParam: 8088
+Client: After CoCreateInstance()
+Client: CLSID_SumSubtract: , IID_ISum:
+Client: ISum interface Cannot Be Obtained.
+Client: Start WndProc() hwnd: 000000000015078C, iMsg: 31, wParam: 0, lParam: 0
+Client: Start WndProc() hwnd: 000000000015078C, iMsg: 10, wParam: 0, lParam: 0
+Client: Start WndProc() hwnd: 000000000015078C, iMsg: 70, wParam: 0, lParam: 398623499296
+Client: Start WndProc() hwnd: 000000000015078C, iMsg: 71, wParam: 0, lParam: 398623499296
+Client: Start WndProc() hwnd: 000000000015078C, iMsg: 127, wParam: 2, lParam: 0
+Client: Start WndProc() hwnd: 000000000015078C, iMsg: 127, wParam: 0, lParam: 0
+Client: Start WndProc() hwnd: 000000000015078C, iMsg: 127, wParam: 1, lParam: 0
+Client: Start WndProc() hwnd: 000000000015078C, iMsg: 28, wParam: 1, lParam: 8088
+Client: Start WndProc() hwnd: 000000000015078C, iMsg: 10, wParam: 1, lParam: 0
+Client: Start WndProc() hwnd: 000000000015078C, iMsg: 70, wParam: 0, lParam: 398623499312
+Client: Start WndProc() hwnd: 000000000015078C, iMsg: 134, wParam: 1, lParam: 2361180
+Client: Start WndProc() hwnd: 000000000015078C, iMsg: 6, wParam: 1, lParam: 2361180
+Client: Start WndProc() hwnd: 000000000015078C, iMsg: 641, wParam: 1, lParam: 3221225487
+Client: Start WndProc() hwnd: 000000000015078C, iMsg: 642, wParam: 2, lParam: 0
+Client: Start WndProc() hwnd: 000000000015078C, iMsg: 7, wParam: 2361180, lParam: 0
+Client: Start WndProc() hwnd: 000000000015078C, iMsg: 144, wParam: 0, lParam: 0
+Client: Start WndProc() hwnd: 000000000015078C, iMsg: 134, wParam: 0, lParam: 0
+Client: Start WndProc() hwnd: 000000000015078C, iMsg: 6, wParam: 0, lParam: 0
+Client: Start WndProc() hwnd: 000000000015078C, iMsg: 28, wParam: 0, lParam: 8088
+Client: Start WndProc() hwnd: 000000000015078C, iMsg: 8, wParam: 0, lParam: 0
+Client: Start WndProc() hwnd: 000000000015078C, iMsg: 641, wParam: 0, lParam: 3221225487
+Client: Start WndProc() hwnd: 000000000015078C, iMsg: 642, wParam: 1, lParam: 0
+Client: Start WndProc() hwnd: 000000000015078C, iMsg: 2, wParam: 0, lParam: 0
+Client: Start WndProc() hwnd: 000000000015078C, iMsg: 130, wParam: 0, lParam: 0
+Start DllMain() Outer
+End DllMain() Outer

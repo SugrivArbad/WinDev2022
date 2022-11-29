@@ -1,0 +1,23 @@
+start CreateInstance() Inner
+Start QueryInterface_NoAggregation()
+End QueryInterface_NoAggregation()
+end CreateInstance() Inner
+Start QueryInterface_NoAggregation()
+End QueryInterface_NoAggregation()
+Start QueryInterface_NoAggregation()
+End QueryInterface_NoAggregation()
+Start QueryInterface_NoAggregation()
+End QueryInterface_NoAggregation()
+Start QueryInterface_NoAggregation()
+End QueryInterface_NoAggregation()
+Start QueryInterface_NoAggregation()
+End QueryInterface_NoAggregation()
+uter
+End QueryInterface() Outer
+After CoCreateInstance()
+Start QueryInterface() Outer
+End QueryInterface() Outer
+Start QueryInterface() Outer
+Start QueryInterface() Outer
+
+WinMain()

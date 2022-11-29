@@ -1,0 +1,11 @@
+*.obj
+*.lib
+*.exp
+*.dll
+*.exe
+*.res
+*.aps
+
+.vs
+Recordings/
+

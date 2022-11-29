@@ -1,0 +1,5 @@
+LIBRARY OuterDllServer.dll
+EXPORTS
+	  DllGetClassObject	PRIVATE
+	  DllCanUnloadNow	PRIVATE
+

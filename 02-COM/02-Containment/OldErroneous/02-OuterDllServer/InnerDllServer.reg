@@ -1,0 +1,7 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\CLSID\{BBB02707-82BA-4ADD-84F7-BE9FBF855EB4}]
+@="SVA: MultiplicationDivision Dll Server"
+[HKEY_CLASSES_ROOT\CLSID\{BBB02707-82BA-4ADD-84F7-BE9FBF855EB4}\InprocServer32]
+@="C:\\Windows\\System32\\InnerDllServer.dll"
+

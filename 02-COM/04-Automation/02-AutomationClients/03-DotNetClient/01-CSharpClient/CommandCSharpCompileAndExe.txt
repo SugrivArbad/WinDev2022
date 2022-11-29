@@ -1,0 +1,35 @@
+
+// CSharp Compile and Create exe
+// csc - CSharp Compiler
+
+C:\Sugriv\WinDev2022\02-COM\04-Automation\02-AutomationClients\03-DotNetClient\01-CSharpClient>
+	csc.exe /r:AutomationServerTypeLibForDotNet.dll CSharpAutomation.cs
+
+Microsoft (R) Visual C# Compiler version 3.11.0-4.22108.8 (d9bef045)
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+
+C:\Sugriv\WinDev2022\02-COM\04-Automation\02-AutomationClients\03-DotNetClient\01-CSharpClient>dir
+ Volume in drive C has no label.
+ Volume Serial Number is AACA-5058
+
+ Directory of C:\Sugriv\WinDev2022\02-COM\04-Automation\02-AutomationClients\03-DotNetClient\01-CSharpClient
+
+19-10-2022  23:38    <DIR>          .
+19-10-2022  23:38    <DIR>          ..
+19-10-2022  23:05                 0 a.cpp
+19-10-2022  22:49             4,096 AutomationServerTypeLibForDotNet.dll
+19-10-2022  23:38               923 CSharpAutomation.cs
+19-10-2022  23:38             4,096 CSharpAutomation.exe
+               4 File(s)          9,115 bytes
+               2 Dir(s)  42,071,412,736 bytes free
+
+C:\Sugriv\WinDev2022\02-COM\04-Automation\02-AutomationClients\03-DotNetClient\01-CSharpClient>CSharpAutomation.exe
+Sum of 165 and 135 is 300
+Subtraction of 165 and 135 is 30
+
+C:\Sugriv\WinDev2022\02-COM\04-Automation\02-AutomationClients\03-DotNetClient\01-CSharpClient>
+
+
+
+

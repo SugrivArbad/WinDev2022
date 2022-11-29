@@ -1,0 +1,2 @@
+#define MYICON 101
+

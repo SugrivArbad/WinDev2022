@@ -1,0 +1,8 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\CLSID\{FEF4B50F-49C0-42E0-9C7D-14402E6ED242}]
+@="SVA: Inner Containment CMultiplicationDivision"
+
+[HKEY_CLASSES_ROOT\CLSID\{FEF4B50F-49C0-42E0-9C7D-14402E6ED242}\InprocServer32]
+@="C:\\Windows\\System32\\ContainmentInnerServer.dll"
+

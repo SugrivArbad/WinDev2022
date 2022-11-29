@@ -1,0 +1,249 @@
+
+// 1: Automation Server -> Compiling and linking -> generating dll
+
+C:\Sugriv\WinDev2022\02-COM\04-Automation\01-AutomationServer>dir
+ Volume in drive C has no label.
+ Volume Serial Number is AACA-5058
+
+ Directory of C:\Sugriv\WinDev2022\02-COM\04-Automation\01-AutomationServer
+
+12-10-2022  16:09    <DIR>          .
+12-10-2022  16:09    <DIR>          ..
+12-10-2022  16:06             2,702 AutomationCompile.txt
+11-10-2022  22:37             8,970 AutomationServer.cpp
+11-10-2022  22:47                99 AutomationServer.def
+11-10-2022  21:42               601 AutomationServer.h
+11-10-2022  22:21            11,439 AutomationServerCopy.cpp
+11-10-2022  21:38               442 guidAutomationServer.txt
+11-10-2022  23:30    <DIR>          ProxyStub
+               6 File(s)         24,253 bytes
+               3 Dir(s)  42,447,581,184 bytes free
+
+C:\Sugriv\WinDev2022\02-COM\04-Automation\01-AutomationServer>cl.exe /c /EHsc /D UNICODE AutomationServer.cpp
+Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30146 for x64
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+AutomationServer.cpp
+
+C:\Sugriv\WinDev2022\02-COM\04-Automation\01-AutomationServer>link.exe AutomationServer.obj /DLL /DEF:AutomationServer.def user32.lib ole32.lib oleaut32.lib /SUBSYSTEM:WINDOWS
+Microsoft (R) Incremental Linker Version 14.29.30146.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+   Creating library AutomationServer.lib and object AutomationServer.exp
+
+C:\Sugriv\WinDev2022\02-COM\04-Automation\01-AutomationServer>dir
+ Volume in drive C has no label.
+ Volume Serial Number is AACA-5058
+
+ Directory of C:\Sugriv\WinDev2022\02-COM\04-Automation\01-AutomationServer
+
+12-10-2022  16:10    <DIR>          .
+12-10-2022  16:10    <DIR>          ..
+12-10-2022  16:06             2,702 AutomationCompile.txt
+11-10-2022  22:37             8,970 AutomationServer.cpp
+11-10-2022  22:47                99 AutomationServer.def
+12-10-2022  16:10           136,704 AutomationServer.dll
+12-10-2022  16:10             1,092 AutomationServer.exp
+11-10-2022  21:42               601 AutomationServer.h
+12-10-2022  16:10             1,718 AutomationServer.lib
+12-10-2022  16:09            22,772 AutomationServer.obj
+11-10-2022  22:21            11,439 AutomationServerCopy.cpp
+11-10-2022  21:38               442 guidAutomationServer.txt
+11-10-2022  23:30    <DIR>          ProxyStub
+              10 File(s)        186,539 bytes
+               3 Dir(s)  42,447,224,832 bytes free
+
+
+
+
+
+
+
+
+// 2: Proxy Stub -> generating 3 .c files and 1 .tlb file
+
+C:\Sugriv\WinDev2022\02-COM\04-Automation\01-AutomationServer\ProxyStub>dir
+ Volume in drive C has no label.
+ Volume Serial Number is AACA-5058
+
+ Directory of C:\Sugriv\WinDev2022\02-COM\04-Automation\01-AutomationServer\ProxyStub
+
+11-10-2022  23:21    <DIR>          .
+11-10-2022  23:21    <DIR>          ..
+11-10-2022  23:21             1,042 AutomationServerTypeLib.idl
+               1 File(s)          1,042 bytes
+               2 Dir(s)  42,557,177,856 bytes free
+
+C:\Sugriv\WinDev2022\02-COM\04-Automation\01-AutomationServer\ProxyStub>midl.exe /h AutomationProxyStubHeader.h /iid AutomationProxyStubGuids.c /dlldata AutomationProxyStubDllData.c /proxy AutomationProxyStub.c AutomationServerTypeLib.idl
+Microsoft (R) 32b/64b MIDL Compiler Version 8.01.0622
+Copyright (c) Microsoft Corporation. All rights reserved.
+64 bit Processing .\AutomationServerTypeLib.idl
+AutomationServerTypeLib.idl
+64 bit Processing C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um\unknwn.idl
+unknwn.idl
+64 bit Processing C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared\wtypes.idl
+wtypes.idl
+64 bit Processing C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared\wtypesbase.idl
+wtypesbase.idl
+64 bit Processing C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared\basetsd.h
+basetsd.h
+64 bit Processing C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared\guiddef.h
+guiddef.h
+64 bit Processing C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um\oaidl.idl
+oaidl.idl
+64 bit Processing C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um\objidl.idl
+objidl.idl
+64 bit Processing C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um\oaidl.acf
+oaidl.acf
+
+C:\Sugriv\WinDev2022\02-COM\04-Automation\01-AutomationServer\ProxyStub>dir
+ Volume in drive C has no label.
+ Volume Serial Number is AACA-5058
+
+ Directory of C:\Sugriv\WinDev2022\02-COM\04-Automation\01-AutomationServer\ProxyStub
+
+11-10-2022  23:30    <DIR>          .
+11-10-2022  23:30    <DIR>          ..
+11-10-2022  23:30            10,921 AutomationProxyStub.c
+11-10-2022  23:30               867 AutomationProxyStubDllData.c
+11-10-2022  23:30             2,022 AutomationProxyStubGuids.c
+11-10-2022  23:30             7,288 AutomationProxyStubHeader.h
+11-10-2022  23:30             1,042 AutomationServerTypeLib.idl
+11-10-2022  23:30             2,124 AutomationServerTypeLib.tlb
+               6 File(s)         24,264 bytes
+               2 Dir(s)  42,553,565,184 bytes free
+
+C:\Sugriv\WinDev2022\02-COM\04-Automation\01-AutomationServer\ProxyStub>
+
+
+
+
+
+
+
+
+
+
+
+
+// 3: ProxyStub - compiling and linking 3 .c files -> generating dll
+// advapi32.lib - Advanced API
+// rpcns4.lib - Remote Procedure Call Namespace - RpcNs
+// rpcrt4.lib - Remote Procedure Call Run Time - RpcRT
+
+C:\Sugriv\WinDev2022\02-COM\04-Automation\01-AutomationServer\ProxyStub>dir
+ Volume in drive C has no label.
+ Volume Serial Number is AACA-5058
+
+ Directory of C:\Sugriv\WinDev2022\02-COM\04-Automation\01-AutomationServer\ProxyStub
+
+13-10-2022  13:03    <DIR>          .
+13-10-2022  13:03    <DIR>          ..
+11-10-2022  23:30            10,921 AutomationProxyStub.c
+13-10-2022  13:03               196 AutomationProxyStub.def
+11-10-2022  23:30               867 AutomationProxyStubDllData.c
+11-10-2022  23:30             2,022 AutomationProxyStubGuids.c
+11-10-2022  23:30             7,288 AutomationProxyStubHeader.h
+12-10-2022  16:12             1,042 AutomationServerTypeLib.idl
+11-10-2022  23:30             2,124 AutomationServerTypeLib.tlb
+               7 File(s)         24,460 bytes
+               2 Dir(s)  42,148,749,312 bytes free
+
+C:\Sugriv\WinDev2022\02-COM\04-Automation\01-AutomationServer\ProxyStub>cl.exe /c /EHsc /D REGISTER_PROXY_DLL AutomationProxyStub.c AutomationProxyStubDllData.c AutomationProxyStubGuids.c
+Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30146 for x64
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+AutomationProxyStub.c
+AutomationProxyStubDllData.c
+AutomationProxyStubGuids.c
+Generating Code...
+
+C:\Sugriv\WinDev2022\02-COM\04-Automation\01-AutomationServer\ProxyStub>dir
+ Volume in drive C has no label.
+ Volume Serial Number is AACA-5058
+
+ Directory of C:\Sugriv\WinDev2022\02-COM\04-Automation\01-AutomationServer\ProxyStub
+
+13-10-2022  13:07    <DIR>          .
+13-10-2022  13:07    <DIR>          ..
+11-10-2022  23:30            10,921 AutomationProxyStub.c
+13-10-2022  13:03               196 AutomationProxyStub.def
+13-10-2022  13:07             3,664 AutomationProxyStub.obj
+11-10-2022  23:30               867 AutomationProxyStubDllData.c
+13-10-2022  13:07             4,144 AutomationProxyStubDllData.obj
+11-10-2022  23:30             2,022 AutomationProxyStubGuids.c
+13-10-2022  13:07             1,017 AutomationProxyStubGuids.obj
+11-10-2022  23:30             7,288 AutomationProxyStubHeader.h
+12-10-2022  16:12             1,042 AutomationServerTypeLib.idl
+11-10-2022  23:30             2,124 AutomationServerTypeLib.tlb
+              10 File(s)         33,285 bytes
+               2 Dir(s)  42,148,823,040 bytes free
+
+C:\Sugriv\WinDev2022\02-COM\04-Automation\01-AutomationServer\ProxyStub>link.exe AutomationProxyStub.obj AutomationProxyStubDllData.obj AutomationProxyStubGuids.obj /DLL /DEF:AutomationProxyStub.def user32.lib ole32.lib oleaut32.lib advapi32.lib rpcns4.lib rpcrt4.lib /SUBSYSTEM:WINDOWS
+Microsoft (R) Incremental Linker Version 14.29.30146.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+   Creating library AutomationProxyStub.lib and object AutomationProxyStub.exp
+
+C:\Sugriv\WinDev2022\02-COM\04-Automation\01-AutomationServer\ProxyStub>dir
+ Volume in drive C has no label.
+ Volume Serial Number is AACA-5058
+
+ Directory of C:\Sugriv\WinDev2022\02-COM\04-Automation\01-AutomationServer\ProxyStub
+
+13-10-2022  13:18    <DIR>          .
+13-10-2022  13:18    <DIR>          ..
+11-10-2022  23:30            10,921 AutomationProxyStub.c
+13-10-2022  13:03               196 AutomationProxyStub.def
+13-10-2022  13:18            94,720 AutomationProxyStub.dll
+13-10-2022  13:18             1,505 AutomationProxyStub.exp
+13-10-2022  13:18             1,752 AutomationProxyStub.lib
+13-10-2022  13:07             3,664 AutomationProxyStub.obj
+11-10-2022  23:30               867 AutomationProxyStubDllData.c
+13-10-2022  13:07             4,144 AutomationProxyStubDllData.obj
+11-10-2022  23:30             2,022 AutomationProxyStubGuids.c
+13-10-2022  13:07             1,017 AutomationProxyStubGuids.obj
+11-10-2022  23:30             7,288 AutomationProxyStubHeader.h
+12-10-2022  16:12             1,042 AutomationServerTypeLib.idl
+11-10-2022  23:30             2,124 AutomationServerTypeLib.tlb
+              13 File(s)        131,262 bytes
+               2 Dir(s)  42,150,977,536 bytes free
+
+
+
+
+
+
+
+// 4: Register entries into registry of Automation Server -> 10 entries
+
+C:\Sugriv\WinDev2022\02-COM\04-Automation\01-AutomationServer> AutomationServer.reg
+
+
+
+
+
+
+
+// 5: copy 2 .dll and 1 .tlb to C:\Windows\System32
+// RegSvr32.exe AutomationProxyStub.dll -> if you have used RegisterServer() and UnRegisterServer()
+
+C:\Windows\System32>dir Automation*
+ Volume in drive C has no label.
+ Volume Serial Number is AACA-5058
+
+ Directory of C:\Windows\System32
+
+13-10-2022  13:40            94,720 AutomationProxyStub.dll
+12-10-2022  16:10           136,704 AutomationServer.dll
+11-10-2022  23:30             2,124 AutomationServerTypeLib.tlb
+               3 File(s)        233,548 bytes
+               0 Dir(s)  42,113,683,456 bytes free
+
+C:\Windows\System32>RegSvr32.exe AutomationProxyStub.dll
+
+C:\Windows\System32>
+
+
+
+

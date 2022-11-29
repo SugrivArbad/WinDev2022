@@ -1,0 +1,12 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\CLSID\{E9A70D7C-C382-4398-B540-AEFEF19232EB}]
+@="SVA: Aggregation Component"
+[HKEY_CLASSES_ROOT\CLSID\{E9A70D7C-C382-4398-B540-AEFEF19232EB}\InprocServer32]
+@="C:\\Windows\\System32\\InnerAggregation.dll"
+
+[HKEY_CLASSES_ROOT\CLSID\{354B2F5B-4DF3-45E6-B742-EBF6746863E4}]
+@="SVA: OuterAggregation SumSubtract Dll Server"
+[HKEY_CLASSES_ROOT\CLSID\{354B2F5B-4DF3-45E6-B742-EBF6746863E4}\InprocServer32]
+@="C:\\Windows\\System32\\OuterAggregation.dll"
+

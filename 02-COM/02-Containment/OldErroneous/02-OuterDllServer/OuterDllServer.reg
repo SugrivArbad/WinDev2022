@@ -1,0 +1,7 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\CLSID\{FFCDBBFA-95CB-4674-9E19-05DCBF7E160C}]
+@="SVA: SumSubtract Dll Server"
+[HKEY_CLASSES_ROOT\CLSID\{FFCDBBFA-95CB-4674-9E19-05DCBF7E160C}\InprocServer32]
+@="C:\\Windows\\System32\\OuterDllServer.dll"
+

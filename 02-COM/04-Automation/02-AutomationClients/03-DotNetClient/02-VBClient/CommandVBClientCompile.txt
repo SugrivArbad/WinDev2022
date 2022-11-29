@@ -1,0 +1,40 @@
+// VBClient Compile and Exe
+// vbc - VisualBasic Compiler
+// /t - type
+// /r - reference
+
+C:\Sugriv\WinDev2022\02-COM\04-Automation\02-AutomationClients\03-DotNetClient\02-VBClient>
+	vbc.exe /t:winexe /r:Microsoft.VisualBasic.dll /r:AutomationServerTypeLibForDotNet.dll VBAutomation.vb
+
+Microsoft (R) Visual Basic Compiler version 3.11.0-4.22108.8 (d9bef045)
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+
+C:\Sugriv\WinDev2022\02-COM\04-Automation\02-AutomationClients\03-DotNetClient\02-VBClient>dir
+ Volume in drive C has no label.
+ Volume Serial Number is AACA-5058
+
+ Directory of C:\Sugriv\WinDev2022\02-COM\04-Automation\02-AutomationClients\03-DotNetClient\02-VBClient
+
+20-10-2022  00:16    <DIR>          .
+20-10-2022  00:16    <DIR>          ..
+19-10-2022  22:49             4,096 AutomationServerTypeLibForDotNet.dll
+20-10-2022  00:16             7,680 VBAutomation.exe
+20-10-2022  00:15               854 VBAutomation.vb
+               3 File(s)         12,630 bytes
+               2 Dir(s)  42,151,456,768 bytes free
+
+C:\Sugriv\WinDev2022\02-COM\04-Automation\02-AutomationClients\03-DotNetClient\02-VBClient>VBAutomation.exe
+
+C:\Sugriv\WinDev2022\02-COM\04-Automation\02-AutomationClients\03-DotNetClient\02-VBClient>
+
+
+
+
+
+
+
+
+
+
+

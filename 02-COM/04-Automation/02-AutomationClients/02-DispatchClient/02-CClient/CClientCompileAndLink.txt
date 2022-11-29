@@ -1,0 +1,57 @@
+C:\Sugriv\WinDev2022\02-COM\04-Automation\02-AutomationClients\02-DispatchClient\02-CClient>cl.exe /c /EHs Window.c
+Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30146 for x64
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+Window.c
+
+C:\Sugriv\WinDev2022\02-COM\04-Automation\02-AutomationClients\02-DispatchClient\02-CClient>dir
+ Volume in drive C has no label.
+ Volume Serial Number is AACA-5058
+
+ Directory of C:\Sugriv\WinDev2022\02-COM\04-Automation\02-AutomationClients\02-DispatchClient\02-CClient
+
+19-10-2022  04:10    <DIR>          .
+19-10-2022  04:10    <DIR>          ..
+19-10-2022  04:10             1,907 AutomationServer.h
+08-09-2022  00:02             1,448 CClassFactoryDllServerWithRegFile.h
+04-07-2022  22:25             3,870 MyIcon.ico
+19-10-2022  04:10             5,646 Window.c
+11-07-2022  23:54                22 Window.h
+19-10-2022  04:11             5,848 Window.obj
+12-07-2022  23:17                49 Window.rc
+08-09-2022  02:36             3,431 WindowOld.c
+               8 File(s)         22,221 bytes
+               2 Dir(s)  42,098,282,496 bytes free
+
+C:\Sugriv\WinDev2022\02-COM\04-Automation\02-AutomationClients\02-DispatchClient\02-CClient>rc.exe Window.rc
+Microsoft (R) Windows (R) Resource Compiler Version 10.0.10011.16384
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+C:\Sugriv\WinDev2022\02-COM\04-Automation\02-AutomationClients\02-DispatchClient\02-CClient>link.exe Window.obj Window.res user32.lib gdi32.lib ole32.lib oleaut32.lib /SUBSYSTEM:WINDOWS
+Microsoft (R) Incremental Linker Version 14.29.30146.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+C:\Sugriv\WinDev2022\02-COM\04-Automation\02-AutomationClients\02-DispatchClient\02-CClient>DIR
+ Volume in drive C has no label.
+ Volume Serial Number is AACA-5058
+
+ Directory of C:\Sugriv\WinDev2022\02-COM\04-Automation\02-AutomationClients\02-DispatchClient\02-CClient
+
+19-10-2022  04:12    <DIR>          .
+19-10-2022  04:12    <DIR>          ..
+19-10-2022  04:10             1,907 AutomationServer.h
+08-09-2022  00:02             1,448 CClassFactoryDllServerWithRegFile.h
+04-07-2022  22:25             3,870 MyIcon.ico
+19-10-2022  04:10             5,646 Window.c
+19-10-2022  04:12            99,328 Window.exe
+11-07-2022  23:54                22 Window.h
+19-10-2022  04:11             5,848 Window.obj
+12-07-2022  23:17                49 Window.rc
+19-10-2022  04:11             4,060 Window.res
+08-09-2022  02:36             3,431 WindowOld.c
+              10 File(s)        125,609 bytes
+               2 Dir(s)  42,097,934,336 bytes free
+
+C:\Sugriv\WinDev2022\02-COM\04-Automation\02-AutomationClients\02-DispatchClient\02-CClient>Window.exe
